@@ -63,8 +63,8 @@ extern "C"
 #define CLR_LINE_CRSR_R     "\033[0K"   // Clear line from cursor right, cursor position unchanged
 #define CLR_LINE_CRSR_L     "\033[1K"   // Clear line from cursor left, cursor position unchanged 
 #define CLR_LINE            "\033[2K"   // Clear current line, cursor position unchanged
-#define HIDE_CURSOR         "\033[?25l"
-#define SHOW_CURSOR         "\033[?25h"
+#define HIDE_CURSOR         "\033[?25l" // Hides the cursor
+#define SHOW_CURSOR         "\033[?25h" // Unhides the cursor
 
 // 
 // Font and Text Attributes
@@ -79,14 +79,6 @@ extern "C"
 #define CYAN_FONT           "\033[36m"
 #define WHITE_FONT          "\033[37m"
 #define UNDERLINE_MODE      "\033[4m"
-
-// 
-// Cursor Positioning and Movement
-// Use actual numbers such as 1, 5, and 12 as actual parameters rather than variables
-// such as Foo and Bar
-// 
-#define CURSER_POS(row,col)                 "\033[row;colH" 
-#define CURSOR_MOVE(up, down, left, right)  "\033[upA\033[downB\033[leftC\033[rightD"
 
 // 
 // Character Specific Display Features
