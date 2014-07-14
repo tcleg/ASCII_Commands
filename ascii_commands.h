@@ -56,15 +56,18 @@ extern "C"
 // Advanced Display Features
 // 
 #define ESCAPE_SEQ          "\033"      // Escape character sequence
+#define CURSOR_UP_LEFT      "\033[H"    // Move cursor to upper left corner
+#define HIDE_CURSOR         "\033[?25l" // Hides the cursor
+#define SHOW_CURSOR         "\033[?25h" // Unhides the cursor
 #define CLR_SCREEN          "\033[2J"   // Clear entire screen
 #define CLR_SCREEN_CRSR_UP  "\033[1J"   // Clear screen from cursor up
 #define CLR_SCREEN_CRSR_DN  "\033[0J"   // Clear screen from cursor down
-#define CURSOR_UP_LEFT      "\033[H"    // Move cursor to upper left corner
-#define CLR_LINE_CRSR_R     "\033[0K"   // Clear line from cursor right, cursor position unchanged
-#define CLR_LINE_CRSR_L     "\033[1K"   // Clear line from cursor left, cursor position unchanged 
-#define CLR_LINE            "\033[2K"   // Clear current line, cursor position unchanged
-#define HIDE_CURSOR         "\033[?25l" // Hides the cursor
-#define SHOW_CURSOR         "\033[?25h" // Unhides the cursor
+#define CLR_LINE_CRSR_R     "\033[0K"   // Clear line from cursor right, cursor 
+                                        // position unchanged
+#define CLR_LINE_CRSR_L     "\033[1K"   // Clear line from cursor left, cursor 
+                                        // position unchanged 
+#define CLR_LINE            "\033[2K"   // Clear current line, cursor position 
+                                        // unchanged
 
 // 
 // Font and Text Attributes
@@ -88,7 +91,8 @@ extern "C"
 #define NEWLINE             "\n"      // Also called Linefeed
 #define VERTICAL_TAB        "\v"
 #define NEW_PAGE            "\f"      // Also called Formfeed            
-#define CARRIAGE_RETURN     "\r"      // Returns to the beginning of the current line
+#define CARRIAGE_RETURN     "\r"      // Returns to the beginning of the current 
+                                      // line
 
 // 
 // End of C Binding
